@@ -1,0 +1,33 @@
+.user-block {
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+
+.user-block__link {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: @color-secondary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-image: url("../img/user.png");
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:focus {
+    color: @color-primary;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+}
